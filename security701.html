@@ -74,8 +74,58 @@
             Authorization model is often in the middle of the Users and Services allowing organization to define Roles     
             
         <b>Abstraction</b> - create 'Groups' inside the organization to easily assign 'Authorization' to users (ex: create 'shipping' group and put all shipping department employees into that group of authorizations)
-    <b>Gap Analysis</b>
-    <b>Zero Trust</b>
+
+    <b>Gap Analysis</b> - where you are compared to where you want to be, the 'gap' between the two
+        <b>Work towards a known Baseline</b> - might be internal goals or organizational standards   
+        <b>NIST Framework</b> 
+        <b>ISO/IEC Framework</b>
+    
+        <b>Evaluate People and Processes</b>
+        <b><i>Get a baseline of employees</i></b>
+        <i>- Employee formal experience</i>
+        <i>- Current training</i>
+        <i>- Knowledge of security policies and procedures</i>
+        
+        <b><i>Examine the current processes</i></b>
+        <i>- Research existing IT systems</i>
+        <i>- Evaluate existing security policies</i>
+    
+        <b>Compare and Contrast</b>
+        <b>the Comparison</b> - evaluate existing systems
+        <b>Identify weakness</b> - along with the most effective processes
+
+        <b>Analysis and Report</b>
+        <b>the Final Comparison:</b>
+            <i>- detailed baseline objectives</i>
+            <i>- clear view of the current state</i>
+
+    <b>Zero Trust</b> - holistic approach to network security, covers every device, every process, every person
+        <b>Everything Must be Verified</b> - split network into 'Functional Planes' for physical, virtual, and cloud components
+
+        <b>Functional Planes: </b>
+            <i><b>Data Plane</b></i> (ports, phsyical ports)- processing frames, packets and networking data
+            <i><b>Control Plane</b></i> (configuration settings, rules for the switch, etc...)- manages the actions of the data plane, define policies and rules (Routing Tables, Session Tables, NAT Tables)
+
+        <b>Adaptive Identity</b> - make certain to consider the source of the requested resources, 
+                                 - consider 'Risk Indicators' - relationship to organization, physical location, connection type, IP address, etc.
+                                 - make authentication stronger, if necessary
+        <b>Threat Scope Reduction</b> - decrease number of possible entry points
+        <b>Policy-driven Access Control</b> - combine adaptive identity with predefined set of rules
+
+        <b>Security Zones</b> - where person is connecting from; security is more than a 1-to-1 relationship
+            <i>create Trusted and Untrusted zones depending on where the traffic originates</i>
+            <i>Implicit Trust</i> - if from internal zone, then perhaps the user is trusted
+        
+        <b>Policy Enforcement Point (PEP)</b> - placed between the system and 'Trusted' Enterprise resources
+        <b>Policy Decision Point (PDP)</b> - process for making the authentication decision 
+            <b>Policy Engine</b> - evaluates access decision based on policy and info source; Grant, Deny, or Revoke
+            <b>Policy Administrator</b> - communicates with the Policy Enforcement Point (PEP), generates access tokens, tells PEP to allow or disallow access
+
+        <b>Overview of Zero-point</b>:
+          <b><i>- 'Subject' and 'System' from 'Untrusted' network communicate with PEP (Policy Enforcement Point) across the Data Plane.
+                - The information is communicated to the PDP (Policy Decision Point) while in the Control Plane and the decision is communicated from the PDP / Control Plane, back to the PEP in the Data Plane
+                - Access is Granted, Denied, or Revoked; if granted then access is allowed to the 'enterprise resource'</i></b>
+
     <b>Physical Security</b>
     <b>Deception and Disruption</b>
 <h3>01.03 Change Management; Technical Change Management</h3>
