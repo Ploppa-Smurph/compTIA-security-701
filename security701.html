@@ -45,15 +45,35 @@
                 <b>redundancy</b>
                 <b>fault tollerance</b>
                 <b>patching</b>
+
     <b>Non-repudiation</b> - being able to verify; 'no taking it back'
         <b>signing a contract</b> - signature adds non-repudiation; others can see the signature
         <b>adds different perspective to cryptography</b> - proof of integrity; proof of origin with high assurance
-        <b>Proof of integrity</b> - verify data remains accurate and the same
+        <b>Proof of Integrity</b> - verify data remains accurate and the same
             <i>Hashing (or 'Message Digest')</i> - if the data changes the hash changes
-        <b></b>
+        <b>Proof of Origin</b> - Authentication to prove source of message
+            <i>signed with 'Private Key'</i> - Private Key is digital signature
+            <i>verify with 'Public Key'</i> - Public Key is used to verify origin; changes to message will invalidate signature
+        <b>add digital signature - Alice sends plaintext message and hashing algorithm makes hash of plaintext, 
+                                 - hash is encrypted with sender (Alice's) private key creating the 'Digital Signature'
+                                 - digital signature is sent with plaintext 
+                                 - Bob receives message and decrypts digital signature with "Alice's Public Key"
+                                 - program verifies hash of plaintext that decrypted from Alice's digital signature</b>
 
-    <b>Authentication, Authorization, and Accounting</b>
+    <b>Authentication, Authorization, and Accounting</b> - AAA Framework
+        <b>Authentication</b> - Identification (verify we are who we say we are)
+        <b>Authorization</b> - What access we have in the system
+        <b>Accounting</b> - Logs of what happened; (ex: Login time, data sent and received, logout time)     
 
+        <b>Authenticating People</b> - digitally signed certificates
+            <b>Certificate Authority (CA)</b> - authenticates certificates, most large organizations maintain their own certificates
+                - the organization will make a 'Certificate' for a device (laptop, tablet, client computer, etc...) and digitally sign the device with the organization's CA
+                - the certificate is now used as the authentication for the device; the CA's digital signature is used to validate the certificate
+        <b>Authorization Models</b> - associates Users (and Services) -> Data and Applications
+              ** challenge is creating relationships that easily scale (not having to associate individual users to their access rights)
+            Authorization model is often in the middle of the Users and Services allowing organization to define Roles     
+            
+        <b>Abstraction</b> - create 'Groups' inside the organization to easily assign 'Authorization' to users (ex: create 'shipping' group and put all shipping department employees into that group of authorizations)
     <b>Gap Analysis</b>
     <b>Zero Trust</b>
     <b>Physical Security</b>
