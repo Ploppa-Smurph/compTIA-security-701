@@ -150,8 +150,50 @@
 
         <b>Honeytoken</b> - add traceable data that allows you to track the malicious actors
 <h3>01.03 Change Management; Technical Change Management</h3>
-    <b>Change Management</b>
-    <b>Technical Change Management</b>
+    <b>Change Management</b> - formal process for managing chagnes; avoid downtime, confusion, and mistakes
+        <b><i>Typical process for change management approval:</i></b>
+            <i>- complete request form</i>
+            <i>- determine purpose of change</i>
+            <i>- identify scope of change</i>
+            <i>- schedule date and time of change</i>
+            <i>- determine affected systems and impact</i>
+            <i>- analyze risk associated with change</i>
+            <i>- control board Approves or Denies change request</i>
+            <i>- get end-user acceptance after the change is complete</i>
+
+        <b>Ownership</b> - individual (or entity) that owns the process
+            ex: the Address Label Printer needs to be upgraded, the 'Shipping' department owns the process, but the 'IT' department handles the actual change
+
+        <b>Stakeholder</b> - will want input on the change management process
+
+        <b>Impact Analysis</b> - determine risk value: High, Medium, Low
+            <b><i>Risks can be minor or far-reaching</i></b> - ex: data corruption, operating system failures, the patch breaks something else in the system...
+            <i>What is the risk with NOT making a change?</i> - vulnerability, application unavailability, downtime with other services
+
+        <b>Sandbox testing environment</b> - safe space to see what changes will do; enables you to figure out 'backout plan'
+
+        <b>Backout plan</b> - if change goes poorly then you need to be able to revert
+
+        <b>Maintenance Window</b> - time frame when changes are made, off hours / change hours; can be challenging in 24 hour 7 day environments
+
+        <b>Standard Operating Procedure</b> - SOP should include change management procedures.
+
+    <b>Technical Change Management</b> - putting change management into action
+        'change mangement' is often concerned with "what" needs to change, the technical team is concerned with "how" to change it.
+
+    <b>Allow / Deny List</b> - Security policy can control app execution
+        <i>Allow List</i> - nothing runs unless approved on the allow list
+        <i>Deny List</i> - anything will run unless on the deny list
+
+    <b>Restricted Activities</b> - scope of change is important
+    <b>Downtime</b> - services will temporarily be unavailable; normally scheduled during non-production hours
+        <i>Secondary system</i> - avoid downtime by having a secondary system to switch to while implementing change
+
+    <b>Restarts</b> - necessary to implement new configurations
+    <b>Legacy Applications</b> - old ass systems or programs
+    <b>Dependencies</b> - 1st service only runs if service 2nd service is also running 
+    <b>Documentation</b> - often part of change management process - must update everything that has changed in documentation.
+    <b>Version Control</b> - keeps detailed configuration, not always straightforward
 <h3>01.04 Public Key Infrastructure; Encrypting Data; Key Exchange; Encryption Technologies; Obfuscation; Hashing and Digital Signatures; Blockchain Technology; Certificates</h3>
     <b>Public Key Infrastructure</b>
     <b>Encrypting Data</b>
