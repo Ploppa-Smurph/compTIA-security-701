@@ -278,137 +278,261 @@
 
         <b>Data Masking</b> - hiding some original data, like only seeing last 4 of credit card on receipt; or last 4 of ss# on some forms, etc...
 
-    <b>Hasing and Digital Signatures</b> 
+    <b>Hasing and Digital Signatures</b> - message digest or fingerprint; short string of text
+        <i>used for Integrity, Non-repudiation, and Authentication</i>
 
-    <b>Blockchain Technology</b>
+        <b>Collision</b> - if 2 different inputs create the same end hash, that is a collision and it should NEVER happen
 
-    <b>Certificates</b>
+        <b>Salting</b> - adding a little more to the hash, used often to help obfuscate passwords
+        <b>Rainbow Table</b> - contains words, passwords along with hashed value to quickly check / compare for values against the rainbow table
+
+        Hashes are used in 'Digital Signatures' for <b><i>Integrity</i></b>, proving the message is unchanged
+                                                    <b><i>Authentication</i></b>, proves the source of the message
+                                                    <b><i>Non-Repudiation</i></b>, verifies the signature
+
+    <b>Blockchain Technology</b> - distributed ledger
+
+    <b>Certificates</b> - 
+        <b>Public Key Certificates</b> - contains both public key & digital signature
+
+        Digital Signature is a way of adding 'Trust'. PKI uses CA (Certificate Authority)
+
+        <b>Certificate Authority</b> - 3rd party website hosts certificates and verifies other website is who they say they are
+
+        <b>Certificate Signing Request</b> - take Applicant's 'Public key' and add applicant ID information to create the Certificate Signing Request
+                                           - CSR is sent to Certificate Authority and CA validates the applicant CSR using the CA 'Private key' to sign a digital certifiate and issue to the Applicant
+
+        <b>Private Certificates</b> - within organizations private certificates are issued and validated
+        <b>Self-signed Certificates</b> - 
+        <b>Wildcard Certificates</b> - lists alternate domains that fall under the certificate validation
+        <b>CRL (Certificate Revocation List)</b> - list of revoked certificates 
+        <b>Heartbleed attack</b> - OpenSSL vulnerability
+        
+        <b>OCSP (Online Certificate Status Protocol)</b> - scalable 
 
 <h2>02 Threats, Vulnerabilities, and Mitigations</h2>
 <h3>02.01 Threat Actors</h3>
+    <b>Threat Actor / Malicious Actor</b> - entity responsible for event impacting safety or security of another entity
+
 <h3>02.02 Common Threat Vectors; Phishing; Impersonation; Watering Hole Attacks; Other Social Engineering</h3>
     <b>Common Threat Vectors</b>
+
     <b>Phishing</b>
+
     <b>Impersonation</b>
+
     <b>Watering Hole Attacks</b>
+
     <b>Other Social Engineering</b>
+
 <h3>02.03 Memory Injections; Buffer Overflows; Race Conditions; Malicious Updates; Operating System Vulnerabilities; SQL Injection; Cross-site Scripting; Hardware Vulnerabilities; Virtualization Vulnerabilities; Cloud-specific Vulnerabilities; Supply Chain Vulnerabilities; Misconfiguration Vulnerabilities; Mobile Device Vulnerabilities; Zero-day Vulnerabilities</h3>
     <b>Memory Injections</b>
+
     <b>Buffer Overflows</b>
+
     <b>Race Conditions</b>
+
     <b>Malicious Updates</b>
+
     <b>Operating System Vulnerabilities</b>
+
     <b>SQL Injection</b>
+
     <b>Cross-site Scripting</b>
+
     <b>Hardware Vulnerabilities</b>
+
     <b>Virtualization Vulnerabilities</b>
+
     <b>Cloud-specific Vulnerabilities</b>
+
     <b>Supply Chain Vulnerabilities</b>
+    
     <b>Misconfiguration Vulnerabilities</b>
+    
     <b>Mobile Device Vulnerabilities</b>
+    
     <b>Zero-day Vulnerabilities</b>
+
 <h3>02.04 An Overview of Malware; Viruses and Worms; Spyware and Bloatware; Other Malware Attacks; Physical Attacks; Denial of Service (DoS); DNS Attacks; Wireless Attacks; On-path Attacks; Replay Attacks; Malicious Code; Application Attacks; Cryptographic Attacks; Password Attacks; Indicators of Compromise</h3>
     <b>Viruses and Worms</b>
+
     <b>Spyware and Bloatware</b>
+
     <b>Other Malware Attacks</b>
+
     <b>Physical Attacks</b>
+
     <b>Denial of Service (DoS)</b>
+
     <b>DNS Attack</b>
+
     <b>Wireless Attack</b>
+
     <b>On-path Attack</b>
+
     <b>Replay Attack</b>
+
     <b>Malicious Code</b>
+
     <b>Application Attack</b>
+
     <b>Cryptographic Attack</b>
+
     <b>Password Attack</b>
+
     <b>Indicators of Compromise</b>
+
 <h3>02.05 Segmentation and Access Control; Mitigation Techniques; Hardening Techniques</h3>
     <b>Segmentation and Access Control</b>
+
     <b>Mitigation Techniques</b>
+
     <b>Hardening Techniques</b>
 
 <h2>03 Security Architecture</h2>
 <h3>03.01 Cloud Infrastructure, Network Infrastructure Concepts, Other Infrastructure Concepts; Infrastructure Considerations</h3>
     <b>Cloud Infrastructure</b>
+
     <b>Network Infrastructure Concepts</b>
+
     <b>Other Infrastructure Concepts</b>
+
     <b>Infrastructure Considerations</b>
+
 <h3>03.02 Secure Infrastructure; Intrusion Prevention; Network Appliance; Port Security; Firewall Types; Secure Communication</h3>
     <b>Secure Infrastructure</b>
+
     <b>Intrusion Prevention</b>
+
     <b>Network Appliance</b>
+
     <b>Port Security</b>
+
     <b>Firewall Types</b>
+
     <b>Secure Communication</b>
+
 <h3>03.03 Data Types and Classifications; States of Data; Protecting Data</h3>
     <b>Data Types and Classifications</b>
+
     <b>States of Data</b>
+
     <b>Protecting Data</b>
+
 <h3>03.04 Resiliency; Capacity Planning; Recovery Testing; Backups; Power Resiliency</h3>
     <b>Resiliency</b>
+
     <b>Capacity Planning</b>
+
     <b>Recovery Testing</b>
+
     <b>Backups</b>
+
     <b>Power Reiliency</b>
 
 <h2>04 Security Operations</h2>
 <h3>04.01 Secure Baselines; Hardening Target; Securing Wireless and Mobile; Wireless Security Settings; Application Security</h3>
     <b>Secure Baselines</b>
+
     <b>Hardening Target</b>
+
     <b>Securing Wireless and Mobile</b>
+
     <b>Wireless Security Settings</b>
+
     <b>Application Security</b>
+
 <h3>04.02 Asset Management</h3>
+
 <h3>04.03 Vulnerability Scanning; Threat Intelligence; Penetration Testing; Analyzing Vulnerabilities; Vulnerability Remediation</h3>
     <b>Vulnerability Scanning</b>
+
     <b>Threat Intelligence</b>
+
     <b>Penetration Testing</b>
+
     <b>Analyzing Vulnerabilities</b>
+
     <b>Vulnerability Remediation</b>
+
 <h3>04.04 Security Monitoring; Security Tools</h3>
+
 <h3>04.05 Firewalls; Web Filtering; Operating System Security; Secure Protocols; Email Security; Monitoring Data; Endpoint Security</h3>
     <b>Firewall</b>
+
     <b>Web Filtering</b>
+
     <b>Operating System Security</b>
+
     <b>Secure Protocols</b>
+
     <b>Email Security</b>
+
     <b>Monitoring Data</b>
+
     <b>Endpoint Security</b>
+
 <h3>04.06 Identity and Access; Access Controls; Multifactor Authentication; Password Security</h3>
     <b>Identity and Access</b>
+
     <b>Access Controls</b>
+
     <b>Multifactor Authentication</b>
+
     <b>Password Security</b>
+
 <h3>04.07 Scripting and Automation</h3>
+
 <h3>04.08 Incident Response; Incident Planning; Digital Forensics</h3>
     <b>Incident Response</b>
+
     <b>Incident Planning</b>
+
     <b>Digital Forensics</b>
+
 <h3>04.09 Log Data</h3>
 
 <h2>05 Security Program Management and Oversight</h2>
+
 <h3>05.01 Security Policies; Security Standards; Security Procedures; Security Considerations; Data Roles and Responsibilities</h3>    
     <b>Security Policies</b>
+
     <b>Security Standards</b>
+
     <b>Security Procedures</b>
+
     <b>Security Considerations</b>
+
     <b>Data Roles and Responsibilities</b>
+
 <h3>05.02 Risk Management; Risk Analysis; Risk Management Strategies; Business Impact Analysis</h3>    
     <b>Risk Management</b>
+
     <b>Risk Analysis</b>
+
     <b>Risk Management Strategies</b>
+
     <b>Business Impact Analysis</b>
+
 <h3>05.03 Third-party Risk Assessment; Agreement Types</h3>    
     <b>Third-party Risk Assessment</b>
+
     <b>Agreement Types</b>
+
 <h3>05.04 Compliance; Privacy</h3>   
     <b>Compliance</b>
+
     <b>Privacy</b>
+
 <h3>05.05 Audits and Assessments; Penetration Tests</h3>    
     <b>Audits and Assessment</b>
+
     <b>Penetration Tests</b>
+
 <h3>05.06 Security Awareness; User Training</h3>    
     <b>Security Awareness</b>
+    
     <b>User Training</b>
 
 </pre>
