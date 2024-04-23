@@ -573,32 +573,80 @@
         <b>Permission Restrictions</b>
 
 <h3>03.04 Resiliency; Capacity Planning; Recovery Testing; Backups; Power Resiliency</h3>
-    <b>Resiliency</b>
+    <b>Resiliency</b> - redundancy does not always mean always available
+        <b>High availability</b> - have the backup already to go at all times
+        <b>Server Clustering</b> - good for scalability and availability; add and remove servers as needed
+        <b>Load Balancing</b> - balancer is the central point, also good for scalability
+        <b>Hot Site</b> - exact replica of existing data center, has backup of all equipment and data
+        <b>Cold Site</b> - no equipment is ready, must bring people and data
+        <b>Warm Site</b> - some equipment is set up and ready
 
-    <b>Capacity Planning</b>
+    <b>Capacity Planning</b> - supply to match demand
+        <b>People</b> - employees for the job functions
+        <b>Technology</b> - need technology that can scale 
+        <b>Infrastructure</b> - cloud is easier to scale as demand changes
 
-    <b>Recovery Testing</b>
+    <b>Recovery Testing</b> - should have specific scope and be made during a scheduled time
+        <b>Tabletop exercise</b> - roleplaying the recovery test
+        <b>Fail over</b> - create redundant infrastructure
+        <b>Simulations</b> - training; fake phishing email to see if the employees click on the email
+        <b>Parallel Processing</b>
 
-    <b>Backups</b>
+    <b>Backups</b> - having another copy of the important stuff
 
-    <b>Power Reiliency</b>
+    <b>Power Reiliency</b> - must plan for outages
+        <b>UPS Uninteruptible Power Supply</b> - short-term backup power; blackout, brownout, surge
+        <b>Generator</b> - larger scale, an powered engine
 
 <h2>04 Security Operations</h2>
 <h3>04.01 Secure Baselines; Hardening Target; Securing Wireless and Mobile; Wireless Security Settings; Application Security</h3>
-    <b>Secure Baselines</b>
+    <b>Secure Baselines</b> - 
 
-    <b>Hardening Target</b>
+    <b>Hardening Target</b> - change the defaults, check with manufacturers for suggestions
+        <b>Patch</b>
+        <b>Segment data</b>
+        <b>Remove unnecessary software</b>
 
     <b>Securing Wireless and Mobile</b>
+        <b>Site Survey</b>
+            <b><i>Find access points currently installed, regularly</i></b>
+            <b><i>Make a 'Heat Map'</i></b>
+            <b><i>Wireless survey tools to find the band and channels of local WiFi networks</i></b>
+            <b><i>MDM Mobile Device Management</i></b>
+            <b><i>BYOD Bring Your Own Device vs COPE Corporate Owned, Personally Enabled</i></b>
 
-    <b>Wireless Security Settings</b>
+    <b>Wireless Security Settings</b> - 
+        <b>WPA2</b> - can be brute forced, the PSK hash is brute forced offline and the key can be decrypted
+        <b>WPA3</b> - GCMP (Galoi/Counter Mode Protocol), includes Message Integrity Check (MIC) and GMAC (Galois Message Authentication Code)
+            <i><b>SAE Simultaneous Authentication of Equals</b></i> - dragonfly handshake
+        <b>Wireless Authentication Methods</b>
+        <b>WPA3-PSK / Personal</b> - everyone uses same 256-bit key
+        <b>WPA3-802.1X / Enterprise</b> - authenticates users individually with Authentication Server (ex: RADIUS server) 
+        <b>RADIUS (Remote Authentication Dial-in User Service)</b> - common AAA protocol
+        <b>AAA Framework</b> - Authentication
+                             - Authorization
+                             - Accounting
+        <b>NAC Network Access Control</b> - 802.1x - asks for username and password
+        <b>EAP (Extensible Authentication Protocol)</b> - authentication framework that integrates with 802.1x
 
     <b>Application Security</b>
+        <b>Quality Assurance</b> - testing code
+        <b>Input Validation</b>
+        <b>Normalization</b> - make certain that all data is in the correct format
+        <b>Cookies</b> - small bits of information stored on browser; secure cookies require HTTPS
+        <b>Static Code Analysis (SAST)</b> - will check code for buffer overflow, database injections, etc
+        <b>Code Signing</b> - has the app been modified? can the author of the application be confirmed?
+        <b>Sandboxing</b> - only has access to data necessary for work 
 
-<h3>04.02 Asset Management</h3>
+<h3>04.02 Asset Management</h3> - keeping up with the goods purchased
+        <b>Acquisition / Procurement Process</b>
+        <b>Asset Tracking System = Assignment / Accounting</b>
+        <b>Monitoring / Asset Tracking</b> = know where all equipment is at all times
+        <b>Media Sanitization</b> - secure format; physically destroying
+        <b>Certificate of Destruction</b>
 
 <h3>04.03 Vulnerability Scanning; Threat Intelligence; Penetration Testing; Analyzing Vulnerabilities; Vulnerability Remediation</h3>
-    <b>Vulnerability Scanning</b>
+    <b>Vulnerability Scanning</b> - 
 
     <b>Threat Intelligence</b>
 
