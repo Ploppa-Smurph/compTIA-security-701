@@ -195,10 +195,46 @@
     <b>Documentation</b> - often part of change management process - must update everything that has changed in documentation.
     <b>Version Control</b> - keeps detailed configuration, not always straightforward
 <h3>01.04 Public Key Infrastructure; Encrypting Data; Key Exchange; Encryption Technologies; Obfuscation; Hashing and Digital Signatures; Blockchain Technology; Certificates</h3>
-    <b>Public Key Infrastructure</b>
+    <b>Public Key Infrastructure</b> - policy & procedure relating to creating, distributing, managing, storing, and revoking Digital Certificates
+        <b><i>also refers to binding of public keys to people or devices in an organization. - Certificate Authority (CA)</i></b>
+    
+        <b>Symmetric encryption / Secret Key Algorithm</b> - single key, single key is the 'shared secret' to encrypt and decrypt
+            <i>Encrypts and decrypts with the same secret key</i> - if key is revealed you will need a new key quickly
+            ** Does not scale well, but is very fast
+        
+        <b>Asymmetric encryption</b> - encrypt with 1 key and decrypt with another
+            <i>a Private and Public key</i> - 
+                <b><i>Private Key</i></b> - each user will have a private key that is kept secret     
+                <b><i>Public Key</i></b> - the public key can be given to anyone, but only matching private keys can decrypt the data
+                  
+        <b>Key Pair</b> - in Asymmetric encryption (aka Public Key Cryptography)
+            <i>Key Generation</i> - builds both Public and Private key at the same time
+                                  - Large Prime numbers and lots of randomization; tons of math
+            <b><i>Bob wants to send Alice an Asymmetrically encrypted message: bob creates plaintext msg and encrypts with Alice's Public key, this creates the 'Ciphertext'.
+                    - Alice receives the encrypted ciphertext and uses her 'Private Key' to unencrypt the ciphertext back into plaintext.          </i></b>
+        
+        <b>Key Escrow</b> - a private 3rd-party holds the decryption key, this may be within your own organization.
+            ** often used in large organizations so that the business / organization can decrypt data if an employee leaves    
 
-    <b>Encrypting Data</b>
+    <b>Encrypting Data</b> - 
+        <b>Encrypting Stored Data</b> - bitlocker on Windows, will encrypt entire volume or drive
+        <b>Encrypt single file</b> - EFS (Encrypting File System) on windows
 
+        <b>Database Encryption</b> - protect stored data and data in transit
+        <b>Transparent Encryption</b> - Encrypt all database information with symmetric key
+        <b>Record-level Encryption</b> - can encrypt individual columns, use separate symmetric keys for each column    
+
+        <b>Transport Encryption</b> - protect data while traversing the network; HTTPS in browser
+        <b>VPN (Virtual Private Network)</b> - encrypt data transmitted over the network regardless of application
+            - Client-based VPN using SSL/TLS
+            - Site-to-site VPN using IPsec
+
+        <b>Encryption Algorithm</b> - many ways to encrypt data; different algorithms provide different security or speed, etc...
+            Both sides must agree on encryption algorithm beforehand; that detail is often hidden from end user
+
+            <b>DES (Data Encryption Standard)</b>
+            <b>AES (Advanced Encryption Standard)</b>
+        
     <b>Key Exchange</b>
 
     <b>Encryption Technologies</b>
@@ -208,7 +244,7 @@
     <b>Hasing and Digital Signatures</b>
 
     <b>Blockchain Technology</b>
-    
+
     <b>Certificates</b>
 
 <h2>02 Threats, Vulnerabilities, and Mitigations</h2>
