@@ -237,10 +237,46 @@
         <b>Key Stretching / Key Strengthening</b> - salting, you hash the hash of a password to stretch it out longer
         
     <b>Key Exchange</b> - is a logistical challenge; 1 way to solve is through 'out-of-band' exchange of key information (off the internet)
+        a way to get around 'out-of-band' exchange is through 'in-band', in-band = encrypting symmetric key asymmetrically and then sharing the symmetric key that way
+        'In-band' key exchanges can allow for real-time ecryption / decryption by using 'Session keys'; they are only used for a short session
+        <b>Session Key</b> - client encryts a random symmetric key with a server's public key
+                           - the server decrypts the shared key and uses it to encrypt data and that creates the 'Session Key'
+
+        Can also create a Symmetric key from Asymmetric keys with 'Public Key Cryptography'
+            - if Bob needs to send to Alice then Bob uses his Private Key and Alice's Public key to create a Symmetric Key; 
+                Alice then uses her Private key and Bob's Public key to create a matching Symmetric key.    
 
     <b>Encryption Technologies</b>
+        <b>TPM (Trusted Platform Module)</b> - specification for cryptographic functions (Cryptography hardware on a device)
+            <b>Persistent memory</b> - TPM has persistent memory (it can store the information)
+            <b>Verstile memory</b> - can store keys, securely store BitLocker Keys 
+            ** TPM is password protected helping defend against Dictionary attacks (says NO Dictionary Attacks)     
 
-    <b>Obfuscation</b>
+        <b>HSM (Hardware Security Module)</b> - commercial environment version of TPM, used in large business and industry
+            <b>Cluster HSMs with redundant power to assure access; can Securely store thousands of cryptographic keys</b>
+
+        <b>Key Management System</b> - allows you to manage the multitude of keys that are required in a modern business environment
+            ex: create keys for specific service or cloud provider (SSL/TLS, SSH, etc.); associate keys with specific users; manager can rotate keys on regular intervals; provide logs of key use and important events
+        
+        <b>Keeping Data Private</b> - hard to keep data secure spread across many devices; constant race against hackers
+        <b>Secure Enclave</b> - protected processor, separate from CPU, often implemented as hardware processor
+                - Secure enclave is part of many phones, becoming more common for laptops and other devices & has it's own boot ROM
+                   secure enclave performs AES encryption inside the hardware and has a true RNG (Random Number Generator)
+
+    <b>Obfuscation</b> - make something more difficult to understand, hiding information in plain site
+            - you only know how to see the data if you know the data was hidden and how it was hidden, so that you can unobscure the data. 
+        <b>Steganography</b> - hide information inside of images or music; greek for 'Concealed Writing'
+            steganography is security through obscurity    
+        <b>Covertext</b> - image or music file that hides the obfuscated document or file
+            <i>Common Steganography techniques: </i>
+                - Network based = Embed message in TCP packet
+                - Image = embed msg in image file
+                - Music file = embed msg in music file
+                - Video file = can store a great deal of data hidden in a video
+        <b>Tokenization</b> - type of obfuscation, sensitive information is replaced with placeholder data and then converted after it has been transmitted
+            - tokenization is NOT encryption or hashing, the original data and token aren't mathematically related
+
+        <b>Data Masking</b> - hiding some original data, like only seeing last 4 of credit card on receipt; or last 4 of ss# on some forms, etc...
 
     <b>Hasing and Digital Signatures</b>
 
