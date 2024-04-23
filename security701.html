@@ -490,26 +490,74 @@
             <b><i>Management Plane aka Application Layer</i></b> - configure the device; SSH, browser, API - configuring using the console is management plane 
 
     <b>Other Infrastructure Concepts</b>
+        <b>SCADA / ICS </b> - Supervisory Control and Data Acquisition System
 
     <b>Infrastructure Considerations</b>
 
 <h3>03.02 Secure Infrastructure; Intrusion Prevention; Network Appliance; Port Security; Firewall Types; Secure Communication</h3>
     <b>Secure Infrastructure</b>
+        <b>Attack Surface</b> - all vulnerabilities
 
     <b>Intrusion Prevention</b>
 
     <b>Network Appliance</b>
+        <b>Jump Server</b> - allow access to secure internal zone
+        <b>Proxy Server</b> - receives user request and sends request on behalf
+            <b>Explicit Proxy</b> - explicitly named 
+            <b>Transparent Proxy</b> - not seen
+        <b>Forware Proxy / Internal</b> - forwards communication from inside the network
+        <b>Reverse Proxy</b> - placed before the web server on the outside of the network
+        <b>Open Proxy</b> - ** security concern ** 
+        <b>Load Balancer</b> - balance traffic load; helps with Fault tollerance
+            <b><i>Active / Active Load Balancer</i></b> - 
+            <b><i>Active / Passive</i></b>
 
-    <b>Port Security</b>
+    <b>Port Security</b> 
+        <b>EAP (Extensible Authentication Protocol)</b> - authentication framework used in port security
+            <i>Supplicant</i> - the client
+            <i>Authenticator</i> - device that provides access
+            <i>Authentication Server</i> - validates client credentials
 
-    <b>Firewall Types</b>
+    <b>Firewall Types</b> - control flow of network traffic
+        <b>Network based</b> - traditional = layer 4
+                             - NGFW (application) = layer 7
+                             - NAT functionality = layer 3
+        <b>UTM / All in one / Web Gateway</b> - older technology; layer 4
+        <b>NGFW / Application Firewall </b> = layer 7; can examine data from every packet
+        <b>WAF Web Application Firewall</b> 
 
     <b>Secure Communication</b>
+        <b>VPN Virtual Private Network</b> 
+            <b><i>Encrytped Tunnel</i></b>
+        <b>SSL/TLS VPN (tcp/443)</b> aka 'Remote Site VPN'
+        <b>Site-to-Site IPSec VPN</b> - has firewall / vpn on outside of network protecting and decrypting data before it reaches the router
+        <b>SD-WAN</b> - cloud based
+        <b>SASE Secure Access Service Edge</b> - modern cloud security layer
+
 
 <h3>03.03 Data Types and Classifications; States of Data; Protecting Data</h3>
     <b>Data Types and Classifications</b>
+        <b>Data Types</b>
+            <b><i>Regulated Data</i></b>
+            <b><i>Trade Secrets</i></b>
+            <b><i>Intellectual Property</i></b>
+            <b><i>Legal Information</i></b>
+            <b><i>Financial Details</i></b>
+        <b>Human readable</b>
+        <b>Non-human readable</b>
+        <b>Proprietary data</b> - only used by the organization
+        <b>PII Personally Identifiable</b>
+        <b>PHI Personal Healthcare Information</b>
+        <b>Sensitive</b>
+        <b>Confidential</b>
+        <b>Public</b>
+        <b>Private</b>
+        <b>Critical</b>
 
     <b>States of Data</b>
+        <b>At Rest / Stored</b>
+        <b>In Use / being used actively, in RAM</b>
+        <b>In Transit / data is being moved from one location to another</b>
 
     <b>Protecting Data</b>
 
